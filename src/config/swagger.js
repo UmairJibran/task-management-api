@@ -7,7 +7,8 @@ const options = {
     info: {
       title: 'Task Management API',
       version: '1.0.0',
-      description: 'API for managing tasks, categories, and user authentication',
+      description:
+        'API for managing tasks, categories, and user authentication',
       license: {
         name: 'MIT',
         url: 'https://opensource.org/licenses/MIT',

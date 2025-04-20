@@ -185,6 +185,27 @@ The API implements consistent error handling with:
 - Joi validation for request data
 - Try-catch blocks for handling unexpected errors
 
+### Testing and Code Coverage
+
+The project includes unit tests using Jest:
+
+- **Controller Testing**: Unit tests for controller functions
+- **Error Handling**: Tests for both success and error scenarios
+- **Coverage Reporting**: Jest coverage reports for monitoring test coverage
+- **Mocking**: Mock implementation of Supabase client for isolated testing
+
+Run tests with:
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
+The coverage report shows detailed information about which parts of the code are tested, helping identify areas that need additional tests.
+
 ### Scheduled Jobs
 
 A daily digest is implemented using node-cron:
@@ -200,3 +221,4 @@ A daily digest is implemented using node-cron:
 - Add email notifications for the daily digest
 - Add user preferences and task priorities
 - Implement tagging system for tasks
+- Expand test coverage for all controllers and functions
