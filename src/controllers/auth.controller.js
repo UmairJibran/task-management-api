@@ -14,7 +14,6 @@ const login = async (req, res) => {
     password,
   });
   if (error) return res.status(400).json({ error: error.message });
-  console.log('🚀 ~ login ~ session:', data.session);
   return res.status(200).json({ session: data.session });
 };
 
