@@ -90,7 +90,7 @@ const getTaskById = async (req, res) => {
           *,
           categories(name),
           status_logs:task_status_logs(*)
-        `
+        `,
       )
       .eq('id', id)
       .single();

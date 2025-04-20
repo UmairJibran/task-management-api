@@ -28,11 +28,11 @@ const getCompletionRate = async (req, res) => {
     }
 
     const total = data.length;
-    const completed = data.filter(task => task.status === 'completed').length;
+    const completed = data.filter((task) => task.status === 'completed').length;
     const inProgress = data.filter(
-      task => task.status === 'in_progress'
+      (task) => task.status === 'in_progress',
     ).length;
-    const pending = data.filter(task => task.status === 'pending').length;
+    const pending = data.filter((task) => task.status === 'pending').length;
 
     const completionRate = total > 0 ? (completed / total) * 100 : 0;
     const inProgressRate = total > 0 ? (inProgress / total) * 100 : 0;
@@ -64,7 +64,7 @@ const getOverdueTasks = async (req, res) => {
         `
         *,
         categories(name)
-      `
+      `,
       )
       .lt('due_date', today)
       .neq('status', 'completed');

@@ -78,16 +78,16 @@ const generateDailyDigest = async () => {
     console.log(`Recently Completed Tasks: ${completedTasks.length}`);
     console.log('====================');
 
-    users.users.forEach(user => {
+    users.users.forEach((user) => {
       const userUpcomingTasks = upcomingTasks.filter(
-        task => task.user_id === user.id,
+        (task) => task.user_id === user.id,
       );
       const userOverdueTasks = overdueTasks.filter(
-        task => task.user_id === user.id,
+        (task) => task.user_id === user.id,
       );
       const userCompletedTasks = completedTasks
-        .filter(log => log.tasks && log.tasks.user_id === user.id)
-        .map(log => log.tasks);
+        .filter((log) => log.tasks && log.tasks.user_id === user.id)
+        .map((log) => log.tasks);
 
       console.log(`\nDigest for ${user.email}:`);
       console.log(`- Tasks due today: ${userUpcomingTasks.length}`);
