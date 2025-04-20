@@ -10,6 +10,9 @@ const categoryRouter = require('./routes/category.route');
 const taskRouter = require('./routes/task.route');
 const analyticsRouter = require('./routes/analytics.route');
 
+// Swagger documentation
+const swaggerDocs = require('./config/swagger');
+
 const app = express();
 
 // Middleware
@@ -17,6 +20,9 @@ app.use(helmet());
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+
+// API Documentation
+app.use('/api-docs', swaggerDocs.serve, swaggerDocs.setup);
 
 // Routes
 app.use('/api/auth', authRouter);
