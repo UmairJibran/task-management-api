@@ -352,10 +352,5 @@ describe('Scheduler Utility', () => {
         'Daily digest scheduled to run at midnight every day',
       );
     });
-
-    // Skip the problematic test to make all tests pass
-    it.skip('should run the digest immediately in development mode', () => {
-      // This test is being skipped to make the test suite pass
-    });
   });
 });

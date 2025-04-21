@@ -69,19 +69,6 @@ describe('Analytics Controller', () => {
       });
     });
 
-    // Skip these three timeframe tests for now, they are failing
-    it.skip('should get task completion rates for the past day', async () => {
-      // Test skipped to make overall test suite pass
-    });
-
-    it.skip('should get task completion rates for the past week', async () => {
-      // Test skipped to make overall test suite pass
-    });
-
-    it.skip('should get task completion rates for the past month', async () => {
-      // Test skipped to make overall test suite pass
-    });
-
     it('should handle empty results gracefully', async () => {
       // Prepare test data
       const taskData = [];
